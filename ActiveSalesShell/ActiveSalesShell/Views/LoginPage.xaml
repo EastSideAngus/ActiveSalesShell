@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ActiveSalesShell.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+            <StackLayout.Padding>
+                50,50,50,50
+            </StackLayout.Padding>
+
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" />
+
+            <Label x:Name="EmailLabel" Text="Email" />
+            <Entry x:Name="EmailField" Placeholder="sam@test.com" Text="{Binding EmailField}" />
+
+            <Label x:Name="PasswordLabel" Text="Password" />
+            <Entry x:Name="PasswordField" IsPassword="True" Placeholder="testing#$" Text="{Binding PasswordField}" />
+
+            <Button x:Name="SignInCommand" Text="Sign In" Command="{Binding SignInCommand}" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
